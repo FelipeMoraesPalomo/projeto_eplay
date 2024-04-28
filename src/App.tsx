@@ -1,4 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './store'
+
+import { BrowserRouter } from 'react-router-dom'
 
 import { GlobalCss } from './styles'
 import Header from './components/Header'
@@ -8,14 +11,16 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalCss />
-      <div className="container">
-        <Header />
-      </div>
-      <Rotas />
-      <Footer />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <GlobalCss />
+        <div className="container">
+          <Header />
+        </div>
+        <Rotas />
+        <Footer />
+      </BrowserRouter>
+    </Provider>
   )
 }
 
