@@ -2,29 +2,11 @@ import Section from '../Section'
 
 import * as S from './styles'
 
-import spider from '../../assets/images/banner-homem-aranha.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
-
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import fechar from '../../assets/images/fechar.png'
 import { useState } from 'react'
 import { GalleryItem } from '../../pages/Home'
-
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: spider
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=iI7lmIWKpAUlkZAp'
-  }
-]
 
 type Props = {
   defaultCover: string
