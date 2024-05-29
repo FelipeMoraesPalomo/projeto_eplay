@@ -4,7 +4,7 @@ import * as S from './styles'
 
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
-import fechar from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/fechar.png'
 import { useState } from 'react'
 import { GalleryItem } from '../../pages/Home'
 
@@ -72,17 +72,11 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ))}
         </S.Items>
       </Section>
-      <S.Modal className={modal.isVisible ? 'visivel' : ''}>
+      <S.Modal className={modal.isVisible ? 'is-visible' : ''}>
         <S.ModalContent className="container">
           <header>
             <h4>{name}</h4>
-            <img
-              src={fechar}
-              alt="ícone de fechar"
-              onClick={() => {
-                closeModal()
-              }}
-            />
+            <img src={closeIcon} alt="ícone de fechar" onClick={closeModal} />
           </header>
           {modal.type === 'image' ? (
             <img src={modal.url} />
