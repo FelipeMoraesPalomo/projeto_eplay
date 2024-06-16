@@ -6,7 +6,6 @@ import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import closeIcon from '../../assets/images/fechar.png'
 import { useState } from 'react'
-import { GalleryItem } from '../../pages/Home'
 
 type Props = {
   defaultCover: string
